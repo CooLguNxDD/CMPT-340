@@ -14,4 +14,4 @@ Required Libraries:
 * seaborn
 * tensorflow
 * sklearn
-* pickle
+* efficientnet

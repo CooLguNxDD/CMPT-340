@@ -21,7 +21,7 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classifica
 df = pd.read_csv('input/HAM10000_metadata.csv', delimiter=',')
 df.dataframeName = 'HAM10000_metadata.csv'
 
-def print_confusion_matrix(model):
+def print_confusion_matrix(model,test_data, test_label):
     model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['acc'])
     score = model.evaluate(test_data, test_label)
     print('Test accuracy:', score[1])
@@ -38,6 +38,7 @@ def print_confusion_matrix(model):
     fig,x = plt.subplots(figsize =(12,12))
     matrix_display.plot(ax=x)
     print(classification_report(pred_label_to_feature,pred_class_to_feature,target_names=labels))
+
 def image_prediction(image_class):
     for images in image_class:
         test_image = image.load_img(images, target_size=(150, 150))
@@ -103,8 +104,6 @@ from tensorflow.keras.optimizers import Adam
 optimizer = Adam(lr=0.001)
 
 # Confusion Matrix and score
-
-
 
 print_confusion_matrix(model_VGG_16)
 print_confusion_matrix(model_INC)

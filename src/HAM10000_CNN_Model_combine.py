@@ -211,9 +211,9 @@ print("V2")
 plot_model_accuracy(train_history,'../plots/CNN_V2_training_history.jpg')
 
 print("V1")
-plot_model_loss(train_history, 'loss', '../plots/CNN_V1_training_loss.jpg')
+plot_model_loss(train_history, '../plots/CNN_V1_training_loss.jpg')
 print("V2")
-plot_model_loss(train_history, 'loss', '../plots/CNN_V2_training_loss.jpg')
+plot_model_loss(train_history, '../plots/CNN_V2_training_loss.jpg')
 
 #score
 score = model_CNN_V1.evaluate(test_data, test_label)

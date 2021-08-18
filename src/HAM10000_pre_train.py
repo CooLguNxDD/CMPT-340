@@ -118,8 +118,8 @@ model.save_weights('../models/VGG_16_weight.h5')
 
 
 # Model evaluation
-plot_model_accuracy(train_history,'../plots/VGG_16_training_history.jpg')
-plot_model_loss(train_history, 'loss', '../plots/VGG_16_training_loss.jpg')
+plot_model_accuracy(train_history, '../plots/VGG_16_training_history.jpg')
+plot_model_loss(train_history, '../plots/VGG_16_training_loss.jpg')
 score = model.evaluate(test_data, test_label)
 print('Test accuracy:', score[1])
 prediction = model.predict(test_data)
@@ -177,8 +177,8 @@ model.save_weights('../models/InceptionV3_weight.h5')
 
 
 # Model Evaluation
-plot_model_accuracy(train_history,'../plots/InceptionV3_training_history.jpg')
-plot_model_loss(train_history, 'loss', '../plots/InceptionV3_training_loss.jpg')
+plot_model_accuracy(train_history, '../plots/InceptionV3_training_history.jpg')
+plot_model_loss(train_history, '../plots/InceptionV3_training_loss.jpg')
 score = model.evaluate(test_data, test_label)
 print('Test accuracy:', score[1])
 prediction = model.predict(test_data)
@@ -235,8 +235,8 @@ model.save_weights('../models/Efficient_Net_weight.h5')
 
 
 # Model evaluation
-plot_model_accuracy(train_history,'../plots/Efficient_Net_training_history.jpg')
-plot_model_loss(train_history, 'loss', '../plots/Efficient_Net_training_loss.jpg')
+plot_model_accuracy(train_history, '../plots/Efficient_Net_training_history.jpg')
+plot_model_loss(train_history, '../plots/Efficient_Net_training_loss.jpg')
 score = model.evaluate(test_data, test_label)
 print('Test accuracy:', score[1])
 prediction = model.predict(test_data)

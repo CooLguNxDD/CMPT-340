@@ -189,9 +189,9 @@ plot_model_accuracy(train_history,'../plots/MLP_V2_training_history.jpg')
 
 # plot loss
 print("MLP V1")
-plot_model_loss(train_history, 'loss', '../plots/MLP_V1_training_loss.jpg')
+plot_model_loss(train_history, '../plots/MLP_V1_training_loss.jpg')
 print("MLP V2")
-plot_model_loss(train_history, 'loss', '../plots/MLP_V2_training_loss.jpg')
+plot_model_loss(train_history, '../plots/MLP_V2_training_loss.jpg')
 
 #score
 score = model_MLP_V1.evaluate(test_data, test_label)
